@@ -12,3 +12,20 @@ dist
 .DS_Store
 ios/**/xcuserdata
 ios/**/*.xcuserstate
+
+# Firebase iOS config and signing material — add locally, never commit
+ios/**/GoogleService-Info.plist
+GoogleService-Info.plist
+**/GoogleService-Info.plist
+google-services.json
+**/google-services.json
+*.p12
+*.p8
+*.pem
+*.mobileprovision
+AuthKey_*.p8
+
+# Local environment (web Firebase and other secrets)
+.env
+.env.*
+!.env.example
