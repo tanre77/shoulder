@@ -27,6 +27,7 @@ export function JobScreen() {
   const [calling, setCalling] = useState(false);
   const [stars, setStars] = useState(() => job?.review?.stars ?? 0);
   const [text, setText] = useState(() => job?.review?.text ?? "");
+  const truck = useTruckSpot(job);
 
   useEffect(() => {
     setStars(job?.review?.stars ?? 0);
@@ -37,7 +38,6 @@ export function JobScreen() {
   const company = job.selectedCompanyId ? companyById(job.selectedCompanyId) : undefined;
   const quote = job.calls.find((call) => call.companyId === job.selectedCompanyId)?.quote;
   const location = locationById(job.locationId);
-  const truck = useTruckSpot(job);
   const spot = job.origin ?? location;
   const liveEta = truck ? truck.leftMin : (job.live?.etaMin ?? quote?.etaMin ?? 0);
   const at = stepIndex(job.status);
