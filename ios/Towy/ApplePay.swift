@@ -2,7 +2,7 @@ import PassKit
 import UIKit
 
 enum ApplePay {
-    static let merchantID = "merchant.com.towy.dispatch"
+    static let merchantID = "merchant.com.shoulder.dispatch"
 
     static func present(amount: Double, completion: @escaping (Bool) -> Void) {
         let request = PKPaymentRequest()
