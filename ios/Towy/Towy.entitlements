@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.in-app-payments</key>
 	<array>
-		<string>merchant.com.towy.dispatch</string>
+		<string>merchant.com.shoulder.dispatch</string>
 	</array>
 </dict>
 </plist>
